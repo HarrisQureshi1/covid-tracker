@@ -1,19 +1,36 @@
 
-import Card from './components/Cards/Cards'
-import Chart from './components/Charts/Charts'
-import CountryPicker from './components/CountryPickers/CountryPickers'
+import React from 'react'
+import Cards from './components/Cards/Cards'
+import Chart from './components/Chart/Chart'
+import CountryPicker from './components/CountryPicker/CountryPicker'
+import { fetchData } from './api'
+import styles from './App.module.css'
 import './App.css';
 
 
-function App() {
-  return (
-    <div className="App">
-        <Card />
+class App extends React.Component {
+  state = {
+    data: {}
+  }
+  async componentDidMount(){
+    const data = await fetchData()
+    this.setState({
+      data
+    })
+    console.log("CovidData", data)
+  }
+
+  render(){
+
+    return (
+    <div className={styles.container}>
+        <Cards data={this.state.data}/>
         <Chart />
         <CountryPicker />
       
     </div>
   );
+}
 }
 
 export default App;
