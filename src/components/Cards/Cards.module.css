@@ -3,7 +3,11 @@ body {
 }
 
 .container {
-    min-width: 345px
+    margin: 40px 0;
+}
+
+.card {
+    margin: 0 2% !important;
 }
 
 .secTitle {
