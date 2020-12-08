@@ -34,11 +34,10 @@ const Cards = ({data: {confirmed, recovered, deaths, lastUpdate}}) => {
     if(!confirmed) {
         return 'Loading...';
     }
-    console.log("props", confirmed)
     return(
         <div className={classes.root} >
             <Grid container spacing={3}>
-                <Grid item xs>
+                <Grid item xs={12}>
                     <Paper className={classes.paper}>
                         <Typography className={classes.title} color="textSecondary" gutterBottom>
                             Confirmed
@@ -56,7 +55,7 @@ const Cards = ({data: {confirmed, recovered, deaths, lastUpdate}}) => {
                         </Typography>
                     </Paper>
                 </Grid>
-                <Grid item xs>
+                <Grid item xs={12}>
                     <Paper className={classes.paper}>
                         <Typography className={styles.secTitle} color="textSecondary" gutterBottom>
                             Recovered
@@ -74,7 +73,7 @@ const Cards = ({data: {confirmed, recovered, deaths, lastUpdate}}) => {
                         </Typography>
                     </Paper>
                 </Grid>
-                <Grid item xs>
+                <Grid item xs={12}>
                     <Paper className={classes.paper}>
                         <Typography className={styles.secTitle} color="textSecondary" gutterBottom>
                             Deaths

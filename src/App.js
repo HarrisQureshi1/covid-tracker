@@ -17,7 +17,7 @@ class App extends React.Component {
     this.setState({
       data
     })
-    console.log("CovidData", data)
+    console.log("CardsData", data)
   }
 
   render(){
@@ -26,8 +26,8 @@ class App extends React.Component {
     <div className={styles.container}>
         <Cards data={this.state.data}/>
         <br />
-        <Chart />
         <CountryPicker />
+        <Chart />
       
     </div>
   );
