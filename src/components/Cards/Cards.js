@@ -12,6 +12,7 @@ import cx from 'classnames'
 const useStyles =  makeStyles((theme) => ({
     root: {
         flexGrow: 1,
+        width: '100%'
       },
       paper: {
         padding: theme.spacing(2),
@@ -37,10 +38,10 @@ const Cards = ({data: {confirmed, recovered, deaths, lastUpdate}}) => {
     return(
         <div className={classes.root} >
             <Grid container spacing={3}>
-                <Grid item xs={12}>
+                <Grid item xs={12} md={4}>
                     <Paper className={classes.paper}>
                         <Typography className={classes.title} color="textSecondary" gutterBottom>
-                            Confirmed
+                            Confirmed!
                         </Typography>
                         <Typography variant="h5" component="h2">
                             <CountUp 
@@ -55,7 +56,7 @@ const Cards = ({data: {confirmed, recovered, deaths, lastUpdate}}) => {
                         </Typography>
                     </Paper>
                 </Grid>
-                <Grid item xs={12}>
+                <Grid item xs={12} md={4} className={styles.cardw}>
                     <Paper className={classes.paper}>
                         <Typography className={styles.secTitle} color="textSecondary" gutterBottom>
                             Recovered
@@ -73,7 +74,7 @@ const Cards = ({data: {confirmed, recovered, deaths, lastUpdate}}) => {
                         </Typography>
                     </Paper>
                 </Grid>
-                <Grid item xs={12}>
+                <Grid item xs={12} md={4}>
                     <Paper className={classes.paper}>
                         <Typography className={styles.secTitle} color="textSecondary" gutterBottom>
                             Deaths
