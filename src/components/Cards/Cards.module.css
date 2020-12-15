@@ -19,3 +19,19 @@ body {
 .secTitle {
     font-size: 14px;
 }
+
+.confirmed {
+    color: white !important;
+    background-image: linear-gradient( -135deg, #52E5E7 10%, #130CB7 100%);
+}
+
+.recovered {
+    color: white !important;
+
+    background-image: linear-gradient( -135deg, #EEAD92 10%, #6018DC 100%);
+}
+
+.deaths {
+    color: white !important;
+    background-image: linear-gradient( -135deg, #FCCF31 10%, #F55555 100%);
+}

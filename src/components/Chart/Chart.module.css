@@ -1,5 +1,9 @@
 .container {
     display: flex;
-    width: 90%;
+    width: 100%;
 
+}
+
+.Line {
+    background: linear-gradient( 135deg, #FFF5C3 10%, #9452A5 100%);
 }
